@@ -1,1 +1,24 @@
-@import "../assets/scss/bootstrap-variables";
+@use "../assets/scss/bootstrap-variables" as *;
+
+.height-main-row {
+  height: $main-row-height;
+}
+
+.full-height-main-content {
+  height: $main-content-height;
+}
+
+.toast-container {
+  bottom: 13%;
+  right: 35%;
+}
+
+.hide-scrollbar {
+  overflow: hidden !important;
+  /* Para esconder scrollbars em navegadores Webkit (Chrome, Safari) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

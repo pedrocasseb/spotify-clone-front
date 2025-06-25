@@ -2,10 +2,13 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { fontAwesomeIcons } from './shared/font-awesome-icons';
+import { Navigation } from "./layout/navigation/navigation";
+import { Library } from "./layout/library/library";
+import { Header } from "./layout/header/header";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FontAwesomeModule],
+  imports: [RouterOutlet, FontAwesomeModule, Navigation, Library, Header],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
