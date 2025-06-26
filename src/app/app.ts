@@ -5,10 +5,12 @@ import { fontAwesomeIcons } from './shared/font-awesome-icons';
 import { Navigation } from "./layout/navigation/navigation";
 import { Library } from "./layout/library/library";
 import { Header } from "./layout/header/header";
+import { Toast } from './service/toast';
+import { NgbToast } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FontAwesomeModule, Navigation, Library, Header],
+  imports: [RouterOutlet, FontAwesomeModule, Navigation, Library, Header, NgbToast],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -17,8 +19,11 @@ export class App {
 
   private faIconLibrary = inject(FaIconLibrary);
 
+  toastService = inject(Toast)
+
   ngOnInit(): void {
     this.initFontAwesome();
+    this.toastService.show('hello toast', 'DANGER');
   }
 
   private initFontAwesome() {

@@ -12,7 +12,7 @@ export interface SongBase {
   author?: AuthorVO;
 }
 
-export interface SavaSong extends SongBase {
+export interface SaveSong extends SongBase {
   file?: File;
   fileContentType?: string;
   cover?: File;
