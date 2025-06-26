@@ -1,0 +1,22 @@
+@use '../../../assets/scss/bootstrap-variables' as *;
+
+.title, .author {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.play fa-icon {
+  font-size: 45px;
+}
+
+.play {
+  bottom: 90px;
+  right: 27px;
+  border-radius: 50px;
+  background-color: $dark;
+  border-style: none;
+  width: 35px;
+  height: 35px;
+}
+

@@ -1,0 +1,28 @@
+@use "../../../assets/scss/bootstrap-variables" as *;
+
+.library-height {
+  height: $library-height;
+}
+
+.library-songs {
+  overflow-y: scroll;
+}
+
+.library-song-card {
+  cursor: pointer;
+}
+
+.library-song-card:hover {
+  background-color: $card-hover-background;
+  border-radius: $card-border-radius;
+}
+
+.hide-scrollbar {
+  overflow: hidden !important;
+  /* Para esconder scrollbars em navegadores Webkit (Chrome, Safari) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
