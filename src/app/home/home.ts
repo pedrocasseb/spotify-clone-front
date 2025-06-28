@@ -1,3 +1,4 @@
+import { SongContentService } from './../service/song-content';
 import { Component, effect, inject, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SongCard } from './song-card/song-card';
@@ -11,10 +12,11 @@ import { ReadSong } from '../service/model/song.model';
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
-export class Home implements OnInit{
+export class Home {
 
   private songService = inject(Song);
   private toastService = inject(Toast);
+  private songContentService = inject(SongContentService);
 
   allSongs: Array<ReadSong> | undefined;
 
@@ -33,8 +35,7 @@ export class Home implements OnInit{
     });
   }
 
-  ngOnInit(): void {
-    this.songService.getAll();
+  onPlaySong(songToPlayFirst: ReadSong) {
+    this.songContentService.createNewQueue(songToPlayFirst, this.allSongs!);
   }
-
 }

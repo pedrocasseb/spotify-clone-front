@@ -46,6 +46,7 @@ export class AddSong implements OnDestroy{
     effect(() => {
       this.isCreating = false;
       if (this.songService.addSig().status === "OK") {
+        this.songService.getAll();
         this.toastService.show('Song created with success', "SUCCESS");
         this.router.navigate(['/']);
       } else if (this.songService.addSig().status === "ERROR") {
