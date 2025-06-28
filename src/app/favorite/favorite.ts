@@ -1,14 +1,13 @@
 import { Component, effect, inject, OnInit } from '@angular/core';
 import { FavoriteSongBtn } from '../shared/favorite-song-btn/favorite-song-btn';
 import { SmallSongCard } from '../shared/small-song-card/small-song-card';
-import { FavoriteSongCard } from '../home/favorite-song-card/favorite-song-card';
 import { ReadSong } from '../service/model/song.model';
 import { Song } from '../service/song';
 import { SongContentService } from '../service/song-content';
 
 @Component({
   selector: 'app-favorite',
-  imports: [ FavoriteSongBtn, SmallSongCard, FavoriteSongCard],
+  imports: [ FavoriteSongBtn, SmallSongCard ],
   templateUrl: './favorite.html',
   styleUrl: './favorite.scss'
 })
