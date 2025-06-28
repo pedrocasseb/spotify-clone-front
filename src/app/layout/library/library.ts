@@ -32,10 +32,11 @@ export class Library implements OnInit{
   }
 
   ngOnInit(): void {
-      this.fetchSongs();
+    this.fetchSongs();
   }
 
   private fetchSongs() {
+    this.isLoading = true;
     this.songService.getAll();
   }
 

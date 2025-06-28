@@ -5,10 +5,11 @@ import { ReadSong, SongContent } from '../../service/model/song.model';
 import {Howl} from "howler";
 import { SmallSongCard } from '../../shared/small-song-card/small-song-card';
 import { FormsModule } from '@angular/forms';
+import { FavoriteSongBtn } from "../../shared/favorite-song-btn/favorite-song-btn";
 
 @Component({
   selector: 'app-player',
-  imports: [ FontAwesomeModule, SmallSongCard, FormsModule],
+  imports: [FontAwesomeModule, SmallSongCard, FormsModule, FavoriteSongBtn],
   templateUrl: './player.html',
   styleUrl: './player.scss'
 })
